@@ -7,7 +7,7 @@ class MyUtils():
     #    self.searcher = LuceneSearcher.from_prebuilt_index('msmarco-v1-passage')
         
     def gen_prompt(self, label, query, doc):
-        with open('rerankgpt3-1k/gen_ds10k/prompt_model.txt') as f:
+        with open('prompt_model.txt') as f:
             prompt_txt = f.readlines()
         f.close()
         prompt_txt.append('\n\nQuestion: ' + query)
