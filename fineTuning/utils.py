@@ -9,7 +9,7 @@ from pytorch_lightning.loggers import NeptuneLogger
 import torch
 import numpy as np
 import csv
-from pyserini.search.lucene import LuceneSearcher
+#from pyserini.search.lucene import LuceneSearcher
 import json
 import os
 
