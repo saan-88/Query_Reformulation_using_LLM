@@ -4,7 +4,7 @@ import json
 import numpy as np
 import torch
 import pytorch_lightning as pl
-# from pyserini.search import LuceneSearcher  # Uncomment if you use this
+from pyserini.search import LuceneSearcher  # Uncomment if you use this
 
 class MyDataset(torch.utils.data.Dataset):
     def __init__(self, mydata, seq_length, tokenizer):
@@ -104,7 +104,7 @@ class MyModel(pl.LightningModule):
 
 class MyUtils():
     def __init__(self):
-        # self.searcher = LuceneSearcher.from_prebuilt_index('msmarco-v1-passage')  # Uncomment if needed
+        self.searcher = LuceneSearcher.from_prebuilt_index('msmarco-v1-passage')  # Uncomment if needed
         pass
 
     def get_query(self, id):
